@@ -31,8 +31,8 @@ classdef model
 
             par.alpha = 0.4; % Physical capital's share of income.
             par.gamma = 1-par.alpha; % Human capital's share of income.
-            par.delta_k = 0.3; % Depreciation rate of physical capital.
-            par.delta_h = 0.3; % Depreciation rate of physical capital.
+            par.delta_k = 0.02; % Depreciation rate of physical capital.
+            par.delta_h = 0.5; % Depreciation rate of physical capital.
 
             assert(par.alpha > 0.0 && par.alpha < 1.0,'Physical capital share of income should be between 0 and 1.\n')
             assert(par.gamma > 0.0 && par.gamma < 1.0,'Human capital share of income should be between 0 and 1.\n')
