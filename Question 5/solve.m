@@ -56,7 +56,7 @@ classdef solve
             c1 = zeros(klen,Alen,hlen); % Container for c.
                             
             crit = 1e-6;
-            maxiter = 10000;
+            maxiter = 50;
             diff = 1;
             iter = 0;
             

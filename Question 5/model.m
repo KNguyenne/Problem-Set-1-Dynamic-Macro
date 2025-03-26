@@ -21,18 +21,18 @@ classdef model
             
             %% Preferences.
             
-            par.beta = 0.96; % Discount factor: Lower values of this mean that consumers are impatient and consume more today.
-            par.sigma = 2.0; % CRRA: Higher values of this mean that consumers are risk averse and do not want to consume too much today.
+            par.beta = 0.9; % Discount factor: Lower values of this mean that consumers are impatient and consume more today.
+            par.sigma = 7.0; % CRRA: Higher values of this mean that consumers are risk averse and do not want to consume too much today.
             
             assert(par.beta > 0.0 && par.beta < 1.0,'Discount factor should be between 0 and 1.\n')
             assert(par.sigma > 0.0,'CRRA should be at least 0.\n')
 
             %% Technology.
 
-            par.alpha = 0.33; % Physical capital's share of income.
+            par.alpha = 0.66; % Physical capital's share of income.
             par.gamma = 1-par.alpha; % Human capital's share of income.
-            par.delta_k = 0.08; % Depreciation rate of physical capital.
-            par.delta_h = 0.04; % Depreciation rate of physical capital.
+            par.delta_k = 0.1; % Depreciation rate of physical capital.
+            par.delta_h = 0.1; % Depreciation rate of physical capital.
 
             assert(par.alpha > 0.0 && par.alpha < 1.0,'Physical capital share of income should be between 0 and 1.\n')
             assert(par.gamma > 0.0 && par.gamma < 1.0,'Human capital share of income should be between 0 and 1.\n')
@@ -40,8 +40,8 @@ classdef model
             assert(par.delta_k >= 0.0 && par.delta_k <= 1.0,'The depreciation rate should be from 0 to 1.\n')
             assert(par.delta_h >= 0.0 && par.delta_h <= 1.0,'The depreciation rate should be from 0 to 1.\n')
 
-            par.sigma_eps = 0.09; % Std. dev of productivity shocks.
-            par.rho = 0.87; % Persistence of AR(1) process.
+            par.sigma_eps = 0.05; % Std. dev of productivity shocks.
+            par.rho = 0.65; % Persistence of AR(1) process.
             par.mu = 0.0; % Intercept of AR(1) process.
 
             assert(par.sigma_eps > 0.0,'The standard deviation of the shock must be positive.\n')
@@ -50,7 +50,7 @@ classdef model
             %% Simulation parameters.
 
             par.seed = 2025; % Seed for simulation.
-            par.T = 100; % Number of time periods.
+            par.T = 25; % Number of time periods.
 
         end
         
